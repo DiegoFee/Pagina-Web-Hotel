@@ -1,0 +1,471 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER ------------------------------------------------------------------------ */
+header{
+    width: 100%;
+    height: 30vw;
+    
+    background-image: url(../images/bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0vw -15vw;
+}
+
+.contenedorHeader{
+    background: linear-gradient(to top, black, transparent);
+    margin-top: 0vw;
+    margin-bottom: 0vw;
+}
+
+/* barra de navegación principal */
+.navegacion{
+    width: 100%;
+    height: 4vw;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+    
+    background-color: black;
+
+    position: sticky;
+    top: 0px;
+}
+.navegacion img{
+    height: 3vw;
+    width: 3vw;
+    margin-left: 8vw;
+}
+
+.navegacion__link{
+    width: 100%;
+    margin-left: 19vw;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+    gap: 2.5vw;
+}
+.navegacion__link a{
+    font-family: Source_Sans_3-Regular, Helvetica;
+    font-size: 1.5vw;
+    text-decoration: none;
+    color: white;
+
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.bienvenida h1{
+    font-family: Quicksand-Bold, Helvetica;
+    font-size: 5vw;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0px, 0px, 4px, black;
+    color: #fef9e7;    
+
+    margin: 4vw 0 0 4vw;
+}
+.bienvenida h2{
+    font-family: Quicksand-Regular, Helvetica;
+    font-size: 3vw;
+    font-weight: bold;
+    font-style: italic;
+    color: #fef9e7;
+
+    margin: 2vw 0 2vw 4vw;
+}
+.bienvenida input{
+    font-family: Source_Sans_3-Regular, Verdana;
+    font-weight: lighter;
+    font-size: 2vw;
+
+    color: #f1c40f;
+    background-color: #2e4053;
+    border-left: 4px solid #f1c40f;
+    border-bottom: 4px solid #f1c40f;
+    border-radius: 8px;
+
+    padding: 0.3vw;
+    margin: 0 0 5vw 4vw;
+
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+
+/* efectos con pseudo-clases */
+.navegacion__link a:hover{
+    background-color: #f1c40f;
+    color: #1b2631;
+
+    font-weight: bold;
+
+    padding: 0.8vw;
+    border-radius: 5px;
+}
+.bienvenida input:hover{
+    font-weight: bold;
+    background-color: #f1c40f;
+    color: #2e4053;
+}
+
+/* MAIN ------------------------------------------------------------------------ */
+main{
+    background-color: #fef9e7;
+    width: 100%;
+    height: 121vw;
+}
+.contenedorMain{
+    padding-top: 0vw;
+    padding-bottom: 0vw;
+    position: relative;
+}
+
+/* contenedor para redes sociales */
+.redesSociales{
+    width: 10vw;
+    height: 30vw;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: -4vw;
+
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 20px;
+
+    position: sticky;
+    top: 15%;
+    left: 0;
+    z-index: -1;
+
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+.redesSociales img{    
+    width: 7vw;
+    height: auto;
+    padding: 1vw;
+}
+
+/* lista de habitaciones */
+.habitaciones1{
+    width: 95%;
+    height: auto;
+    margin: -35vw 0 2.5vw 0;
+    padding: 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+
+    filter: drop-shadow(-10px 10px 10px black);
+    border: 3px solid transparent;
+
+    transition-property: all;
+    transition-duration: 5s;
+}
+.habitaciones2{
+    width: 95%;
+    height: auto;
+    margin: 0vw 0 0 0;
+    padding: 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+
+    filter: drop-shadow(-10px 10px 10px black);
+    border: 3px solid transparent;
+
+    transition-property: all;
+    transition-duration: 5s;
+}
+.habitaciones__item{
+    width: 25%;
+    height: 30vw;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+.habitaciones1 .item__img1{
+    background-image: url(../images/suiteDeluxe-1.png);
+    background-position: -10vw 0vw;
+}
+.habitaciones1 .item__img2{
+    background-image: url(../images/suitePresidencial-2.png);
+    background-position: -4vw 0vw;
+}
+.habitaciones1 .item__img3{
+    background-image: url(../images/habitacionEjecutiva-3.jpg);
+    background-position: -18vw 0vw;
+}
+.habitaciones2 .item__img4{
+    background-image: url(../images/habitacionIndividual-4.jpg);
+    background-position: -18.5vw 0vw;
+}
+.habitaciones2 .item__img5{
+    background-image: url(../images/habitacionDoble-5.jpg);
+    background-position: -10.5vw 0vw;
+}
+.habitaciones2 .item__img6{
+    background-image: url(../images/habitacionFamiliar-6.png);
+    background-position: -22vw 0vw;
+}
+.habitaciones1 h3, .habitaciones2 h3{
+    margin-top: 10px;
+    font-family: Source_Sans_3-Regular, Helvetica;
+    font-size: 3vw;
+    text-align: center;
+
+    color: #fef9e7;
+    filter: drop-shadow(0px 0px 3px black);
+}
+.habitaciones1 p, .habitaciones2 p{
+    margin-top: 10px;
+    font-family: Source_Sans_3-Regular, Helvetica;
+    font-size: 1.5vw;
+    text-align: center;
+
+    color: antiquewhite;
+    filter: drop-shadow(0px 0px 3px black);
+}
+
+/* lista de servicios */
+.servicios{
+    background-color: #fef9e7;
+    width: 100%;
+    height: auto;
+    padding: 12vw 0 2vw 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    align-items: center;
+    gap: 8px;
+
+    border: 3px solid transparent;
+}
+.servicios__item{
+    width: 22%;
+    height: 10vw;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 0px 3px black);
+
+    transition-property: all;
+    transition-duration: 1s;
+}
+.servicios .item__img1{
+    background-image: url(../icons/servicio1.png);
+    background-position: 7.2vw 0vw;
+}
+.servicios .item__img2{
+    background-image: url(../icons/servicio2.png);
+    background-position: 5.5vw 0vw;
+}
+.servicios .item__img3{
+    background-image: url(../icons/servicio3.png);
+    background-position: 5.5vw 0vw;
+}
+.servicios .item__img4{
+    background-image: url(../icons/servicio4.png);
+    background-position: 4.5vw 0vw;
+}
+.servicios h2{
+    font-family: Source_Sans_3-Regular, Helvetica;
+    font-size: 2vw;
+    text-align: center;
+
+    color: #212f3c;
+    filter: drop-shadow(0px 0px 3px white);
+}
+
+/* componentes decorativos */
+.componente__header{
+    width: 100%;
+    margin: 0vw 0 0 0;
+    position: relative;
+    z-index: 1;
+}
+.componente__footer{
+    width: 100%;
+    margin: 0 0 0 0;
+    object-position: 0 0px;
+    z-index: 1;
+}
+
+/* efectos con pseudo-clases */
+.contenedorMain:hover .redesSociales{
+    left: 2vw;
+    z-index: 1;
+}
+.redesSociales:hover{
+    width: 11vw;
+}
+.redesSociales img:hover{
+    filter: drop-shadow(0px 0px 6px white);
+}
+
+.habitaciones1:hover, .habitaciones2:hover{
+    background-color: #fef9e7;
+    border-radius: 5px;
+}
+.habitaciones__item:hover{
+    margin-top: -1.5vw;
+}
+
+.servicios__item:hover{
+    margin-top: -1vw;
+}
+
+/* FOOTER ------------------------------------------------------------------------ */
+footer{
+    width: 100%;
+    height: 15vw;
+
+    background-image: url(../images/bg2.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: 0vw -50vw;
+}
+.contenedorFooter{
+    background: linear-gradient(to bottom, black, transparent);
+    padding-top: 0vw ;
+    padding-bottom: 0vw ;
+}
+
+/* información de marca */
+.contenedorFooter .derechos{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2vw 0 2vw 0;
+}
+.contenedorFooter .contacto{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.contenedorFooter .derechos p{
+    font-family: Helvetica;
+    font-size: 1.1vw;
+    color: #fef9e7;
+    letter-spacing: 1.5px;
+}
+.contenedorFooter .contacto p{
+    font-family: Helvetica;
+    font-size: 1.3vw;
+    font-weight: bolder;
+    color: #fef9e7;
+    letter-spacing: 0.5px;
+}
+.contenedorFooter .contacto img{
+    width: 2.5vw;
+    height: auto;
+}
+
+/* CLASES ESPECÍFICAS-------------------------------------------------------------- */
+.no--selecciobable{
+    color: transparent;
+}
+.no--selecciobable::selection{
+    color: transparent;
+}
+
+/* ventana de cookies */
+.dialog{
+    background: linear-gradient(to top, black, #000C);
+    border: none;
+
+    padding-top: 10vw;
+    margin: 0vw;
+
+    width: 100%;
+    height: 166vw;
+
+    z-index: 1;
+}
+.contenedorDialog{
+    width: 95%;
+    margin: auto;
+    background-color: #d5f5e3;
+    color: black;
+
+    font-family: Source_Sans_3-Regular, Helvetica;
+    font-size: 1.5vw;
+    text-align: center;
+
+    border-radius: 5px;
+}
+.contenedorDialog p{
+    padding: 1vw;
+
+}
+
+.contenedorDialog .mensaje{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.contenedorDialog .mensaje img{
+    width: 3vw;
+}
+.contenedorDialog .mensaje h3{
+    font-size: 2vw;
+}
+
+.contenedorDialog .opciones{
+    background-color: #abebc6;
+    border-radius: 5px;
+    padding: 0.2vw;
+}
+.contenedorDialog .opciones button{
+    background-color: #2ecc71;
+    font-size: 1.5vw;
+    font-weight: bold;
+
+    padding: 0.5vw;
+    border-radius: 5px;
+}
+.contenedorDialog .opciones button:hover{
+    text-decoration: underline;
+    color: white;
+}
+
